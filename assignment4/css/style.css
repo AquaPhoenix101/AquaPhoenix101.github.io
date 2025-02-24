@@ -1,0 +1,160 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display:flex;
+    flex-direction: column;
+}
+
+/* Standard text-settings */
+html {
+    font-size: 1em;
+    line-height: 1.4em;
+}
+
+/* Background Gradient Animation */
+body {
+     background: linear-gradient(166deg, 
+        rgb(142, 117, 132) 0%,   /* Lighter, more vibrant */
+        rgb(122, 97, 112) 36%,   /* Core hue */
+        rgb(110, 85, 98) 100%    /* Darker but more contrast */
+    );
+    background-size: 300% 300%; /* Smoother transition effect */
+    animation: gradient-shift 4s infinite alternate ease-in-out;
+    overflow: hidden;
+    flex:1;
+}
+
+/* Improved gradient animation for smooth effect */
+
+@keyframes gradient-shift {
+    0% { background-position: 0% 50%; }
+    25% { background-position: 50% 75%; }
+    50% { background-position: 100% 50%; }
+    75% { background-position: 50% 25%; }
+    100% { background-position: 0% 50%; }
+}
+
+@media (max-width: 768px) {
+    p {
+        font-size: 2em;
+    }
+    .pH, .pW, .pL, .pP3 {
+        font-size: 1.8em;
+    }
+}
+
+/* Main content styling */
+main {
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    height: 70vh;
+    text-align:center;
+    padding:20px
+    flex:1;
+}
+
+/* Main container */
+#container {
+    max-width: 1500px;
+    padding: 50px;
+    margin: auto;
+    color: rgb(198,185,193);
+    text-shadow: 2px 2px rgb(28,23,26);
+}
+
+/* Header text styling */
+h1, h2 {
+    color: rgb(84,69,78);
+    text-shadow: 1px 1px rgb(28,23,26);
+    font-size: 1.25em;
+}
+
+/* Paragraph styles */
+p {
+    display:flex;
+    flex-direction: column;
+    align-items:flex-start;
+    justify-content: flex-start;
+    
+    font-family: "Lugrasimo", serif;
+    font-style: normal;
+    font-size: 3em;
+    line-height: 1.2;
+    letter-spacing: 5px;
+    
+    width:100%;
+    max-width: 3000px;
+}
+
+.quote-author {
+    font-family: "Lugrasimo", serif;
+    font-style: normal;
+    font-size: 0.75em;
+    line-height: 1.2;
+    letter-spacing: 5px;
+    margin-left:10px;
+    align-self:flex-end;
+    margin-top:25px;
+    white-space: nowrap;
+}
+.quote-text {
+    display: inline-block;
+    max-width: 100%;
+    
+}
+
+/* Emphasized words */
+.pH, .pW, .pL, .pP3 {
+    font-family: "Smooch", serif;
+    font-size: 2.5em;
+    color: rgb(70,57,65);
+    text-shadow: 1.5px 1.5px rgb(165,141,156);
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.pH:hover, .pW:hover, .pL:hover, .pP3:hover {
+    transform: scale(1.1);
+    color: rgb(221,213,218); /* A contrasting color */
+    text-shadow: 3px 3px 5px rgba(221,213,218,0.5); /* Subtle glow */
+}
+
+.pP3 {
+    font-size: 3.5em;
+}
+
+/* Placeholder spacing for footer positioning */
+.spacing-element {
+    height: 10px;
+}
+
+/* Footer positioning fix */
+footer {
+    position:relative;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    z-index: 10;
+    text-align: center;
+}
+
+/* Button Styling */
+button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background: transparent;
+    border: 2px solid rgb(198,185,193);
+    cursor: pointer;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    z-index: 1; /* Ensures button doesn't overlap footer */
+}
+
+/* Button hover effect */
+button:hover {
+    background: rgb(198,185,193);
+    color: rgb(84,69,78);
+    box-shadow: 0px 0px 10px rgba(198,185,193,0.7);
+    transform: translateY(-2px);
+}
