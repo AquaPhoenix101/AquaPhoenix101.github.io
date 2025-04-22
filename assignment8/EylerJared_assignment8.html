@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	
+	<title>Nothing To See here</title>
+	
+	<link rel="stylesheet" href="css/style.css">
+    
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&display=swap" rel="stylesheet">
+	
+</head>
+
+
+<body>
+
+  <div id="container">
+
+<header>
+    <h1>There Is Nothing For You Here.</h1>
+    <h2>Leave While You Still Can.</h2>
+</header>
+      
+      <p class="Warning">DO NOT TOUCH ME</p>
+      
+    <figure id="torch">
+        <img src="img/torch.png" alt="I See You" width=100% height=100%>
+          <figcaption>I see what you're doing. Stop Now.</figcaption>
+    </figure>
+      
+    <figure id="troll">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=3h_6QgQryPH8Xav-&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </figure>
+      
+        
+    <div class="moon_btn"></div>
+    <div class="me_btn"></div>
+    <div class="torch_btn"></div>
+      
+  </div><!-- close "container" -->
+
+
+
+    
+      <!-- Link to jQuery on Google CDN-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+    
+    $("p.Warning").hide();
+    $(".me_btn").hide();
+    $(".torch_btn").hide();
+    $("figure#torch").hide();
+    $("figure#troll").hide();
+    
+  $(document).ready(function() { 
+  
+      //open moon button
+$(".moon_btn").on("click", function(){
+      $("p.Warning").show();
+      $(".me_btn").show()
+  });
+      //close moon button
+      //open me button
+$(".me_btn").on("click", function(){
+      $("figure#torch").show();
+      $(".torch_btn").show();
+  });
+      //close me button
+      //open torch button
+$(".torch_btn").on("click", function(){
+      $("figure#troll").show();
+  });
+      //close torch button
+  
+  
+  }); //close .ready()
+</script>
+    
+</body>
+	
+</html> 
