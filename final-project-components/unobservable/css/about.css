@@ -129,7 +129,7 @@ You can adjust the min-width numbers below, and add as many new media queries as
 @media all and (min-width: 769px) {
     
     body {
-        overflow:hidden;
+ 
     }
     h1 {
     font-size:5em;
