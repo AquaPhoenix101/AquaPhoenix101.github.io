@@ -199,10 +199,8 @@ You can adjust the min-width numbers below, and add as many new media queries as
     
     .moonFace {
         width:100%;
-        display:block;
-        position:absolute;
-        align-content:center;
-        left:650px;
+        display:flex;
+	justify-content:center;
     }
     
     #logoLeft {
@@ -229,9 +227,6 @@ You can adjust the min-width numbers below, and add as many new media queries as
         align-content: center;
         color:white;
         max-width:1200px;
-        padding-top:325px; 
-
-
     }
 	
 	
